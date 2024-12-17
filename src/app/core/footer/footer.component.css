@@ -1,0 +1,56 @@
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-link {
+  color: #fff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.social-link i {
+  margin-right: 8px;
+  font-size: 1.4rem;
+}
+
+.social-link:hover {
+  color: #0077b5; /* Couleur pour LinkedIn */
+}
+
+.social-link.github:hover {
+  color: #333; /* Couleur pour GitHub */
+}
+
+@media (max-width: 768px) {
+  .social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .social-link {
+    margin: 0 10px;
+  }
+}

@@ -1,0 +1,50 @@
+/* Style pour le conteneur du formulaire */
+.form-container {
+    background-color: #ffffff; /* Couleur de fond blanche */
+    border: 1px solid #ddd;   /* Bordure grise claire */
+    border-radius: 8px;       /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    padding: 20px;            /* Espacement interne */
+    max-width: 400px;         /* Largeur maximale du formulaire */
+    margin: 20px auto;        /* Centrer le formulaire */
+    font-family: Arial, sans-serif; /* Police par défaut */
+  }
+  
+  /* Style pour les champs du formulaire */
+  .form-container input[type="text"],
+  .form-container input[type="email"],
+  .form-container input[type="password"],
+  .form-container textarea,
+  .form-container select {
+    width: 100%;              /* Champ prend toute la largeur */
+    padding: 10px;            /* Espacement interne */
+    margin-bottom: 15px;      /* Espacement entre les champs */
+    border: 1px solid #ccc;   /* Bordure grise claire */
+    border-radius: 4px;       /* Coins arrondis */
+    font-size: 14px;          /* Taille de la police */
+    box-sizing: border-box;   /* Inclure padding et bordure dans la largeur totale */
+  }
+  
+  /* Style pour le bouton */
+  .form-container button {
+    background-color: #007bff; /* Couleur bleu primaire */
+    color: #fff;              /* Texte blanc */
+    border: none;             /* Pas de bordure */
+    padding: 10px 15px;       /* Espacement interne */
+    font-size: 16px;          /* Taille de la police */
+    border-radius: 4px;       /* Coins arrondis */
+    cursor: pointer;          /* Curseur en main */
+    width: 100%;              /* Bouton prend toute la largeur */
+  }
+  
+  .form-container button:hover {
+    background-color: #0056b3; /* Couleur bleu plus foncé au survol */
+  }
+  
+  /* Style pour le titre du formulaire */
+  .form-container h2 {
+    text-align: center;       /* Centrer le texte */
+    margin-bottom: 20px;      /* Espacement sous le titre */
+    color: #333;             /* Couleur du texte */
+  }
+  

@@ -1,0 +1,59 @@
+.about {
+  text-align: center;
+  margin: 20px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detail {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease-in-out;
+}
+
+.detail:hover {
+  transform: translateY(-5px);
+}
+
+.detail h3 {
+  font-size: 1.6rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.detail p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.detail i {
+  margin-right: 10px;
+}
+
+.detail a {
+  font-size: 1rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.detail a:hover {
+  text-decoration: underline;
+}
+
+.portfolio-list {
+  display: flex; /* Makes the items align horizontally */
+  overflow-x: auto; /* Enables horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+  white-space: nowrap; /* Prevents line breaks */
+}
+
+.portfolio-list li {
+  flex: 0 0 auto; /* Prevents items from shrinking or wrapping */
+  margin-right: 20px; /* Adds spacing between items */
+}

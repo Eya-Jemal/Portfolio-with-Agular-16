@@ -1,0 +1,41 @@
+<main>
+  <article>
+    <section class="section portfolio" aria-labelledby="portfolio-label">
+      <div class="container">
+
+        <h2 class="section-title headline-md text-center" id="portfolio-label">Latest Projects</h2>
+
+        <!-- Affichage d'un message de chargement -->
+        <div *ngIf="isLoading" class="loading">Chargement des projets...</div>
+
+        <!-- Affichage d'un message d'erreur -->
+        <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+        <!-- Liste des projets -->
+        <ul class="portfolio-list" *ngIf="!isLoading && !errorMessage">
+          <li *ngFor="let project of projects">
+            <div class="portfolio-card">
+
+              <div class="card-banner img-holder" style="--width: 800; --height: 540;">
+                <img [src]="project.image" width="800" height="540" loading="lazy" [alt]="project.title"
+                  class="img-cover">
+
+                <a [href]="project.link" class="btn-icon" [attr.aria-label]="'More about ' + project.title">
+                </a>
+              </div>              
+
+              <div  class="card-content" >
+                <span class="chip label-md">Web Design</span>
+                <h3 class="title-md" >{{ project.title }}</h3>
+                <p class="card-text" >{{ project.description }}</p>
+                <a class="btn btn-primary" [href]="project.link" target="_blank">Voir le projet</a>
+              </div>
+
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+  </article>
+</main>

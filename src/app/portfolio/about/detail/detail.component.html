@@ -1,0 +1,8 @@
+<div class="detail">
+  <h3>
+    <i *ngIf="detail.icon" [class]="detail.icon"></i>
+    {{ detail.title }}
+  </h3>
+  <p>{{ detail.description }}</p>
+  <a *ngIf="detail.link" [href]="detail.link" target="_blank">En savoir plus</a>
+</div>

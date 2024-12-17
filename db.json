@@ -1,0 +1,18 @@
+{
+    "projects": [
+        {
+          "title": "Website Design for Marketing Agency Startup",
+          "description": "I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores.",
+          "image": "./assets/images/portfolio-1.jpg",
+          "link": "https://example.com/project1"
+        },
+        {
+          "title": "Creative Portfolio Website",
+          "description": "A creative portfolio website designed with stunning visuals and smooth animations.",
+          "image": "./assets/images/portfolio-2.jpg",
+          "link": "https://example.com/project2"
+        }
+      ]
+      
+  }
+  

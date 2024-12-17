@@ -1,0 +1,94 @@
+<main>
+  <article >
+
+    <!-- 
+      - #CONTACT
+    -->
+    <section class="section contact has-bg-image"  aria-labelledby="contact-label"
+      style="background-image: url('./assets/images/contact-bg.png')">
+      <div class="container">
+
+        <form class="form-container" #contactForm="ngForm" (ngSubmit)="onSubmit()">
+
+          <h2 class="headline-sm" id="contact-label">contact-us</h2>
+
+          <div class="wrapper">
+
+            <div>
+              <label for="name" class="label">First name</label>
+
+              <input type="text" name="name" id="name" placeholder="Name *" required class="input-field">
+            </div>
+
+            <div>
+              <label for="email" class="label">Your Email </label>
+
+              <input type="email" name="email" id="email" placeholder="Email *" required class="input-field">
+            </div>
+
+          </div>
+
+          <label for="subject" class="label">Subject</label>
+          <input type="text" name="subject" id="subject" placeholder="Subject *" class="input-field">
+
+          <label for="message" class="label">Your message </label>
+          <textarea name="message" id="message" placeholder="Your message *" required class="input-field"></textarea>
+
+          <a href="#" class="btn btn-tertiary">Send Message</a>
+
+        </form>
+
+        <div class="contact-content">
+
+          <ul class="contact-list">
+
+            <li class="contact-item">
+
+              <div class="item-icon" style="background-color: hsl(177, 39%, 72%)">
+              </div>
+
+              <div>
+                <p class="label-lg">Phone</p>
+
+                <a href="tel:+011236548096" class="body-lg">+216 -- --- ---</a>
+              </div>
+
+            </li>
+
+            <li class="contact-item">
+
+              <div class="item-icon" style="background-color: hsl(41, 99%, 64%)">
+              </div>
+
+              <div>
+                <p class="label-lg">Mail</p>
+
+                <a href="tel:info@domainname.com" class="body-lg"><p>eya.jemal.contact&#64;gmail.com<p></a>
+              </div>
+
+            </li>
+
+            <li class="contact-item">
+
+              <div class="item-icon" style="background-color: hsl(19, 97%, 85%)">
+              </div>
+
+              <div>
+                <p class="label-lg">My location</p>
+
+                <address class="body-lg">
+                  Sfax, Tunisia
+                </address>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </section>
+
+  </article>
+</main>

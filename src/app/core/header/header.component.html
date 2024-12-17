@@ -1,0 +1,45 @@
+
+  <header class="header" [class.scrolled]="isScrolled" data-header>
+    <div class="container">
+
+    
+
+      <nav class="navbar" data-navbar [ngClass]="status ? 'active' : ''">
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a routerLink="/" class="label-lg navbar-link has-after" routerLinkActive="active">Portfolio</a>
+          </li>
+
+          <li class="navbar-item">
+            <a routerLink="/about" class="label-lg navbar-link has-after" routerLinkActive="active">About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a routerLink="/services"  class="label-lg navbar-link has-after" routerLinkActive="active">Services</a>
+          </li>
+
+          <li class="navbar-item">
+            <a routerLink="/projects"  class="label-lg navbar-link has-after" routerLinkActive="active">projects</a>
+          </li>
+
+          <li class="navbar-item">
+            <a routerLink="/resumepage"  class="label-lg navbar-link has-after" routerLinkActive="active">Resume</a>
+          </li>
+
+          <li class="navbar-item">
+            <a routerLink="/contact"  class="label-lg navbar-link has-after" routerLinkActive="active">Contact</a>
+          </li>
+
+          
+
+        </ul>
+      </nav>
+
+      <a routerLink="/contact" class="btn btn-primary">Contact Now</a>
+
+      <button class="nav-toggle-btn" aria-label="menu" data-nav-toggler (click)="addToggle()">
+      </button>
+
+    </div>
+  </header>
