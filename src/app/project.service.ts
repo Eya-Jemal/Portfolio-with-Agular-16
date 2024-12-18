@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 export class ProjectService {
 
   private apiUrl = 'http://localhost:3000/projects';  // URL du JSON server
+  private apiUrl1 = 'http://localhost:3000/portfolio';
 
   constructor(private http: HttpClient) { }
 
@@ -17,4 +18,12 @@ export class ProjectService {
   getProjects(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
+
+  getPortfolioData(): Observable<any> {
+    return this.http.get<any>(this.apiUrl1);
+  }
+
+  
+
+  
 }

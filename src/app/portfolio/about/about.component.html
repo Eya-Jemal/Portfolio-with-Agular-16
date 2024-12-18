@@ -14,103 +14,30 @@
         
 
         <ul id="portfolio-list" class="portfolio-list slider" (mouseover)="pauseScroll()"
-  (mouseleave)="resumeScroll()" >
+            (mouseleave)="resumeScroll()" >
 
-          <li>
-            <div class="portfolio-card">
-
-              <div class="card-banner img-holder" style="width: 400; height: 240;">
-                <img src="./assets/images/certif.png" width="400" height="240" loading="lazy"
-                  alt="Website Design for Marketing Agency Startup" class="img-cover">
-
-                <a href="#" class="btn-icon" aria-label="">
-                </a>
-              </div>
-
-              <div class="card-content">
-
-                <span class="chip label-md">(May 2024)</span>
-
-                <h3 class="title-md">Scrum Fundamentals Certified (SFC)</h3>
-
-                <p class="card-text">
-                   
-                </p>
-
-                <a href="https://www.scrumstudy.com/certification/verify?type=SFC&number=1032573" class="btn btn-primary">View Certification</a>
-
-              </div>
-
-            </div>
-          </li>
-
-          <li>
-            <div class="portfolio-card">
-
-              <div class="card-banner img-holder" style="width: 400; height: 240;">
-                <img src="./assets/images/certif.png" width="400" height="240" loading="lazy"
-                  alt="Website Design for Marketing Agency Startup" class="img-cover">
-
-                <a href="#" class="btn-icon" aria-label="">
-                </a>
-              </div>
-
-              <div class="card-content">
-
-                <span class="chip label-md">(May 2024)</span>
-
-                <h3 class="title-md">Scrum Fundamentals Certified (SFC)</h3>
-
-                <p class="card-text">
-                   
-                </p>
-
-                <a href="https://www.scrumstudy.com/certification/verify?type=SFC&number=1032573" class="btn btn-primary">View Certification</a>
-
-              </div>
-
-            </div>
-          </li>
-
-          <li>
-            <div class="portfolio-card">
-
-              <div class="card-banner img-holder" style="width: 400; height: 240;">
-                <img src="./assets/images/certif.png" width="400" height="240" loading="lazy"
-                  alt="Website Design for Marketing Agency Startup" class="img-cover">
-
-                <a href="#" class="btn-icon" aria-label="">
-                </a>
-              </div>
-
-              <div class="card-content">
-
-                <span class="chip label-md">(May 2024)</span>
-
-                <h3 class="title-md">Scrum Fundamentals Certified (SFC)</h3>
-
-                <p class="card-text">
-                   
-                </p>
-
-                <a href="https://www.scrumstudy.com/certification/verify?type=SFC&number=1032573" class="btn btn-primary">View Certification</a>
-
-              </div>
-
-            </div>
-          </li>
-
-         
-
-          
-          
+              <li *ngFor="let item of portfolioData">
+                <div class="portfolio-card">
+                  <div class="card-banner img-holder" style="width: 800; height: 540;">
+                    <img [src]="item.image" [alt]="item.title" width="800" height="540" loading="lazy"
+                       class="img-cover">
+                    <a href="#" class="btn-icon" aria-label="">
+                    </a>
+                  </div>
+                  <div class="card-content">
+                    <span class="chip label-md">{{ item.date }}</span>
+                    <h3 class="title-md">{{ item.title }}</h3>
+                    <a [href]="item.url" class="btn btn-primary">View Certification</a>
+                  </div>
+                </div>
+              </li>
 
         </ul>
         <ul>
 
           <li>
             <div class="about">
-              <h2>À propos de moi</h2>
+              <h2 class="section-title headline-md text-center" id="portfolio-label">About Me</h2>
               
               <!-- Animation d'apparition des détails -->
               <div class="details" *ngFor="let detail of details">

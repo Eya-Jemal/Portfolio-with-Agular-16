@@ -1,11 +1,23 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ProjectService } from 'src/app/project.service';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent {
+export class AboutComponent implements OnInit {
+
+  portfolioData: any[] = []; // Array to hold the portfolio data
+
+  constructor(private ProjectService: ProjectService) {}
+
+  ngOnInit(): void {
+    this.ProjectService.getPortfolioData().subscribe(data => {
+      this.portfolioData = data; // Store fetched data into portfolioData array
+    });
+  }
+  
   details = [
     {
       title: 'Biographie',
@@ -29,10 +41,7 @@ export class AboutComponent {
 
   private scrollInterval: any;
 
-  ngOnInit(): void {
-    // Start the automatic scroll when the component is initialized
-    this.startAutoScroll();
-  }
+ 
 
   ngOnDestroy(): void {
     // Clear the interval when the component is destroyed
@@ -45,17 +54,18 @@ export class AboutComponent {
     const list = document.getElementById('portfolio-list');
 
     if (list) {
+      const itemWidth = list.firstElementChild?.clientWidth || 200; // Width of one <li> (default fallback 200px)
+
       this.scrollInterval = setInterval(() => {
-        const scrollAmount = 200; // Pixels to scroll
         const maxScroll = list.scrollWidth - list.clientWidth;
 
-        // Check if we've reached the end; if so, scroll back to start
+        // Scroll to the next item
         if (list.scrollLeft >= maxScroll) {
-          list.scrollLeft = 0;
+          list.scrollLeft = 0; // Reset to the start
         } else {
-          list.scrollLeft += scrollAmount;
+          list.scrollLeft += itemWidth; // Scroll by the width of one item
         }
-      }, 3000); // Scroll every 3 seconds
+      }, 1000); // Faster scrolling: Every 1 second
     }
   }
 

@@ -12,7 +12,30 @@
           "image": "./assets/images/portfolio-2.jpg",
           "link": "https://example.com/project2"
         }
+      ],
+
+      "portfolio":[
+        {
+          "image": "./assets/images/certif.png",
+          "date": "(May 2024)",
+          "title": "Scrum Fundamentals Certified (SFC)",
+          "url": "https://www.scrumstudy.com/certification/verify?type=SFC&number=1032573"
+        },
+        {
+          "image": "./assets/images/certif.png",
+          "date": "(May 2024)",
+          "title": "Scrum Fundamentals Certified (SFC)",
+          "url": "https://www.scrumstudy.com/certification/verify?type=SFC&number=1032573"
+        },
+        {
+          "image": "./assets/images/certif.png",
+          "date": "(May 2024)",
+          "title": "Scrum Fundamentals Certified (SFC)",
+          "url": "https://www.scrumstudy.com/certification/verify?type=SFC&number=1032573"
+        }
       ]
+
+      
       
   }
   

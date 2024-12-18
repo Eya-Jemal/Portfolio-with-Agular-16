@@ -8,36 +8,51 @@
       style="background-image: url('./assets/images/contact-bg.png')">
       <div class="container">
 
-        <form class="form-container" #contactForm="ngForm" (ngSubmit)="onSubmit()">
+        <form class="form-container" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
 
-          <h2 class="headline-sm" id="contact-label">contact-us</h2>
-
+          <h2 class="headline-sm" id="contact-label">Contact Us</h2>
+        
           <div class="wrapper">
-
+        
             <div>
-              <label for="name" class="label">First name</label>
-
-              <input type="text" name="name" id="name" placeholder="Name *" required class="input-field">
+              <label for="name" class="label">First Name</label>
+              <input type="text" name="name" id="name" placeholder="Name *" required [(ngModel)]="userName" #name="ngModel" class="input-field">
+              <!-- Display error message if the field is touched and invalid -->
+              <div *ngIf="name.touched && name.invalid" class="error-message">
+                Name is required.
+              </div>
             </div>
-
+        
             <div>
-              <label for="email" class="label">Your Email </label>
-
-              <input type="email" name="email" id="email" placeholder="Email *" required class="input-field">
+              <label for="email" class="label">Your Email</label>
+              <input type="email" name="email" id="email" placeholder="Email *" required [(ngModel)]="email" #emailModel="ngModel" class="input-field">
+              <!-- Email validation error -->
+              <div *ngIf="emailModel.touched && emailModel.invalid" class="error-message">
+                <div *ngIf="emailModel.errors?.['required']">Email is required.</div>
+                <div *ngIf="emailModel.errors?.['email']">Please enter a valid email.</div>
+              </div>
             </div>
-
+        
           </div>
-
+        
           <label for="subject" class="label">Subject</label>
-          <input type="text" name="subject" id="subject" placeholder="Subject *" class="input-field">
-
-          <label for="message" class="label">Your message </label>
-          <textarea name="message" id="message" placeholder="Your message *" required class="input-field"></textarea>
-
-          <a href="#" class="btn btn-tertiary">Send Message</a>
-
+          <input type="text" name="subject" id="subject" placeholder="Subject *" required [(ngModel)]="subject" #subjectModel="ngModel" class="input-field">
+          <!-- Subject validation error -->
+          <div *ngIf="subjectModel.touched && subjectModel.invalid" class="error-message">
+            Subject is required.
+          </div>
+        
+          <label for="message" class="label">Your Message</label>
+          <textarea name="message" id="message" placeholder="Your message *" required [(ngModel)]="message" #messageModel="ngModel" class="input-field"></textarea>
+          <!-- Message validation error -->
+          <div *ngIf="messageModel.touched && messageModel.invalid" class="error-message">
+            Message is required.
+          </div>
+        
+          <button type="submit" class="btn btn-tertiary" [disabled]="contactForm.invalid">Send Message</button>
+        
         </form>
-
+        
         <div class="contact-content">
 
           <ul class="contact-list">
@@ -88,7 +103,15 @@
         </div>
 
       </div>
+
+      
     </section>
 
   </article>
 </main>
+
+<div *ngIf="formSubmitted" class="thank-you-overlay">
+  <h3 class="section-title headline-md text-center" >Thank you! We will reply soon.</h3>
+     
+    
+</div>
